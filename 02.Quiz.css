@@ -1,0 +1,111 @@
+.contanier{
+    display: flex;
+    align-self: center;
+    margin-top: 50rem;
+}
+
+.round{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45vw;
+    margin: auto;
+    background: transparent;
+    border: 2px solid rgba(255, 235, 235, 0.5);
+    border-radius: 1.25rem;
+    backdrop-filter: blur(1.25rem);
+    box-shadow: 0 0 1.8rem rgba(231, 86, 226, 0.5);
+    padding: 1rem;
+    transition: height 0.2s ease;
+}
+
+.user-options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    padding: 0 1rem;
+    height: 2rem;
+    border: 0.2rem solid rgb(231, 86, 235);
+    margin-top: 0.5rem;
+    font-size: larger;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+#question{
+    width: 30rem;
+    text-align: center;
+    font-size:medium;
+}
+
+.choice-container {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    width: 15rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    border: 0.1rem solid rgb(231, 165, 235, 0.25);
+    background-color: rgba(10, 0, 10, 0.3);
+}
+  
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(231, 86, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.choice-prefix {
+    padding: 0.3rem 1.1rem;
+    background-color: rgb(231, 86, 235);
+    color: white;
+    align-items: center;
+}
+
+.choice-text {
+    padding: 1.5rem;
+    font-size: small;
+}
+
+.select{
+    background-color: rgba(231, 90, 217, 0.25);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(231, 86, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.correct{
+    background-color: aquamarine;
+}
+
+.incorrect{
+    background-color: brown;
+}
+
+.submit-quiz{
+    border: 0.1rem solid rgb(231, 215, 251);
+    background: transparent;
+    font-size: medium;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.8rem;
+    margin-top: 1.2rem;
+    width: 5.25rem;
+    margin-bottom: 1rem;
+    align-self: center;
+}
+
+.submit-quiz:hover{
+    background-color: rgb(231, 86, 226);
+}

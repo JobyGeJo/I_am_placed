@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+:root{
+  background-image: url(/Images/images.jpeg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*{
+  font-family: 'Oswald', sans-serif;
+  color: rgb(231, 215, 251);
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 90vw;
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 5rem;
+  width: 90vw;
+  padding: 1rem 0 5rem 0;
+}
+  
+.logo {
+  height: 5rem;
+  width: 5rem;
+}
+  
+.pages{
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.login{
+  border: 0.1rem solid rgb(231, 215, 251);
+  background: transparent;
+  font-size: large;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  margin-top: 1.2rem;
+  width: 5rem;
+}
+  
+.pages a{
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+
+  text-align: center;
+  border: 0.1rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+.pages a:hover, .login:hover{
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(231, 86, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.login:hover{
+  background-color: rgb(231, 86, 226);
+}
+  
+.pages a[disabled]:hover, .login[disabled]:hover{
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin: auto;
+  height: 25rem;
+  width: 20rem;
+  background: transparent;
+  border: 2px solid rgba(255, 235, 235, 0.5);
+  border-radius: 1.25rem;
+  backdrop-filter: blur(1.25rem);
+  box-shadow: 0 0 1.8rem rgba(231, 86, 226, 0.5);
+  transition: height 0.2s ease, transform 0.5s ease;
+  overflow: hidden;
+  transform: scale(0);
+}
+
+.wrapper.popup{
+  transform: scale(1);
+}
+
+.wrapper.popup .form-login, .wrapper.popup .form-register{
+  width: 15rem;
+  padding: 2.5rem;
+}
+
+.wrapper .form-login{
+  transition: transform 0.18s ease;
+  transform: translateX(0rem);
+}
+
+.wrapper .form-register{
+  position: absolute;
+  transform: translateX(25rem);
+}
+
+.wrapper.active .form-login{
+  transition: none;
+  transform: translateX(-25rem);
+  height: auto;
+}
+
+.wrapper.active{
+  height: 28.2rem;
+}
+
+.wrapper.active .form-register{
+  transition: transform 0.18s ease;
+  transform: translateX(0rem);
+}
+
+h2{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.icon-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  background-color: rgba(231, 86, 226, 0.7);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 1.25rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.icon-close:hover{
+  background-color: rgb(231, 86, 226);
+}
+
+.inputbox {
+  display: flex;
+  position: relative;
+  width: 15rem;
+  height: 3.2rem;
+  border-bottom: 0.1rem solid rgb(255, 235, 235);
+  margin: 1.8rem 0;
+}
+
+.inputbox label{
+  position: absolute;
+  top: 50%;
+  left: 0.3rem;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.inputbox input:focus~label,
+.inputbox input:valid~label{
+  top: 0;
+}
+
+.inputbox input{
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 0 2.2rem 0 0.3rem;
+}
+
+.inputbox .icon{
+  position: absolute;
+  right: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 3.5rem;
+}
+
+.essentials{
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin: -1rem 0 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.essentials label{
+  display: inline-flex;
+}
+
+.essentials label input{
+  accent-color: rgb(231, 86, 226);
+}
+
+.shift{
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 1.5rem 0 0.625rem;
+}
+
+.essentials a, .shift p a{
+  color: rgba(231, 86, 226, 0.5);
+  text-decoration: none;
+}
+
+.essentials a:hover, .shift p a:hover{
+  color: rgb(231, 86, 226);
+  text-decoration: underline;
+}
+
+.submit{
+  width: 15rem;
+  height: 2.8rem;
+  background: rgba(231, 86, 226, 0.7);
+  border: none;
+  outline: none;
+  border-radius: 0.35rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.submit:hover{
+  background: rgb(231, 86, 226);
+}
+
